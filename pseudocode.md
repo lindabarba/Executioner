@@ -1,22 +1,5 @@
 #Hangman
 
-##User functionality
-1. Player 1 should be able to submit a word or phrase (character limit?)  
-2. Square/blank spaces should show up; number should correspond to length of word or phrase (including blank spaces)  
-3. Player 2 should be able to submit a single letter guess. There should be a corresponding reaction on the board/canvas (either a part of the gallows/man (7 pieces) with wrong letter displayed crossed out or other OR letter revealed to corresponding square/blank space)  
-4. Player 2 should be able to guess whole word or phrase at any time.  
-5. Once gallows or word/phrase is "full", game is either won by Player 1 (gallows full) or Player 2 (word/phrase full).
-6. Game will have start over, can be invoked at any time.
-
-
-##UI
-1. Basic gallows (no noose, platform, wood arm for "hanging")
-2. Title header
-3. Basic rules explanation?
-4. Game board/canvas
-5. Table with row for "blanked-out" word or phrase, row for incorrect letter guesses, row for status message  
-6. Footer with more info?
-
 ##App state/variables
 1. player1Word - word or phrase submitted by Player 1, inititally blank string '' or empty array []
 2. gallows - blank
@@ -50,3 +33,7 @@ Start with blank slate to allow for 7 guesses (noose, head, body, 2 arms, 2 legs
     d. else next letterEntered  
 10. Handling reset game.  
     a. 
+
+##Icebox
+1. Saving score
+2. 

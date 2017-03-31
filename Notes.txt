@@ -1,0 +1,53 @@
+Firstly, set a document size. I used 1280 x 900 because I will be using cssgrid which will allow my website to scale between mobile resolutions to a maximum of 1140 pixels easily.
+
+https://trello.com/b/46CZcoKL/hangman-wdi-dt-44-project-1
+https://github.com/lindabarba/WDI-LB-Work/tree/master/projects/Hangman
+
+User functionality
+1. Player 1 should be able to submit a word or phrase (character limit?)  
+2. Square/blank spaces should show up; number should correspond to length of word or phrase (including blank spaces)  
+3. Player 2 should be able to submit a single letter guess. There should be a corresponding reaction on the board/canvas (either a part of the gallows/man (7 pieces) with wrong letter displayed crossed out or other OR letter revealed to corresponding square/blank space)  
+4. Player 2 should be able to guess whole word or phrase at any time.  
+5. Once gallows or word/phrase is "full", game is either won by Player 1 (gallows full) or Player 2 (word/phrase full).
+6. Game will have start over, can be invoked at any time.
+
+-----
+
+As Player 1 (game player), I want to submit a word or phrase to challenge Player 2 (game player).
+----- 
+Would this be entered via typing on device keyboard or in-app virtual keyboard? How to limit the character numbers allow?
+
+As Player 2 (game player), I want to be able to see how many letters are in the word or phrase Player 1 (game player) chose for me so that I can begin guessing letters.
+---
+Display via table or divs? String or array?
+
+As Player 2 (game player), I want to guess a letter or the entire word/phrase so that I can win the game.
+-----
+How to ensure multi-letters treated as one for loss purposes.
+
+As Player 1 or Player 2 (game player), I want to see the entire board update (gallows illustration, letters either going into word/phrase or being struck out) with each guess so that I know the result of each letter choice.
+
+As Player 1 or Player 2 (game player), I want to know when I've won.
+-----
+Display win message for either player.
+
+As Player 1 or Player 2 (game player), I want to be able to start a new game at any point.
+
+
+
+------
+FURTHER HANGMAN RULES:
+To make the game harder, make a rule saying that the players can only guess the secret word once before they lose.
+OR
+Play "In & Out" Hangman for a more challenging game. This game works best with longer words or phrases. The rules are the same with one crucial exception: every other letter you guess should not be in the secret word. The player needs to alternate guessing letters that are in the word (the "in" round) and letters that are not in the word (the "out" round) until they win or lose.
+If the player says a letter that is in the secret word the host writes it in regardless of the round the player is in. If they guess a letter that is in the word while on the "out" round, they still get a strike, however.
+To make this easier, the host can write out every letter of the alphabet and cross them out as they become eliminated.
+
+##UI
+1. Basic gallows (no noose, platform, wood arm for "hanging")
+2. Title header
+3. Basic rules explanation?
+4. Game board/canvas
+5. Table with row for "blanked-out" word or phrase, row for incorrect letter guesses, row for status message  
+6. Footer with more info?
+
