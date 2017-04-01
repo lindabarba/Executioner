@@ -5,7 +5,8 @@ player1Word = []; // input/word or phrase submitted by Player 1
 letterEntered = []; // input/letters, word, or phrase submitted by Player 2
 player2Word = []; // cummulatively holds value of 'correct' lettersEntered
 badLetters = []; // cummulatively holds value of 'incorrect' lettersEntered
-alphabet = [];
+alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+   'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 gallows = []; //not sure if this is necessary; to hold value of divs to flip
 
 /*--- event listeners ---*/
