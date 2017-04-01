@@ -14,7 +14,7 @@ jQuery
   **PLACEHOLDER FOR GOOGLE FONT AND IMAGUR LINKS.**
   
 ###Getting Started/Installing/Prerequisites  
-No addtional software, APIs, plug-ins, frameworks, or libraries need to be installed to play the game.  
+No addtional software, APIs, plug-ins, frameworks, or libraries need to be installed to play the game. **TO BE UPDATED IF CSS LIBRARY ADDED**  
 This game has been tested in the following browsers (minimum version required):  
 **LIST TO BE UPDATED WITH VER AFTER TESTING
 - Chrome (X.x)  

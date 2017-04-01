@@ -51,3 +51,54 @@ To make this easier, the host can write out every letter of the alphabet and cro
 5. Table with row for "blanked-out" word or phrase, row for incorrect letter guesses, row for status message  
 6. Footer with more info?
 
+
+------
+FROM JIM:
+Starting notes:
+- code style (identation, white space, consistency - for example ' vs ", func dec v fun expres)
+
+- naming of variables
+	- nouns
+	- only as long as necessary
+	- "state" refers to ALL of the app's variables/model ie everything like board, player, etc
+	   but if var state then should be obj holding these ie
+	    {
+		board: []
+		player: []
+
+- naming of functions
+	- verbs
+	  render should be ? actually rendering
+	- only as long as necessary
+
+- consider making others want to play your game (eye candy, sounds, high scores, features...) - use 
+	key value pairs/local storage to store high scores
+
+--
+proj week:
+sign up with Jim or Jon - if 'can't move error prob' priority, if logic or enhancement, queue
+Wednesday is Deployment - push game to cloud
+
+QUESTIONS:
+- how much commenting in code?
+- developer wishes vs user stories
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
