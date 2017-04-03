@@ -1,0 +1,76 @@
+body {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Nosifer', cursive;
+  font-size: 5em;
+  color: rgb(175,5,5);
+  margin: 25px 0px 0px 0px;
+  text-align: center;
+}
+
+p {
+  font: 1em bold;
+  font-family: 'Amatic SC', cursive;
+  margin: 0px 0px 15px 0px;
+  text-align: center;
+}
+
+.gallows {
+  height: 500px;
+  width: 50%;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.word-table {
+  width: 48%;
+  font: 3em bold;
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.word-cell {
+  border-top: hidden;
+  border-right: hidden;
+  border-bottom: 2px solid #000;
+  border-left: hidden;
+}
+
+.message {
+  font: 2em bold;
+  font-family: 'Amatic SC', cursive;
+  margin: 15px 0px 5px 0px;
+  text-align: center;
+}
+
+.keyboard-table {
+  width: 75%;
+  font: 3em bold;
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  cursor: pointer;
+}
+
+.keyboard-cell {
+  border: 1px solid #000;
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+}
+
+footer {
+  text-align: center;
+  font-size: 10px;
+}
