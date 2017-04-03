@@ -17,7 +17,7 @@ p {
   text-align: center;
 }
 
-.message {
+.display {
   font: 2em bold;
   font-family: 'Amatic SC', cursive;
   margin: 10px auto;
@@ -45,7 +45,7 @@ button {
   align-items: center;
 }
 
-.word-table {
+#word-table {
   width: 48%;
   font: 3em bold;
   font-family: 'Amatic SC', cursive;
@@ -62,7 +62,7 @@ button {
   border-left: hidden;
 }
 
-.keyboard-table {
+#keyboard-table {
   width: 75%;
   font: 3em bold;
   font-family: 'Amatic SC', cursive;

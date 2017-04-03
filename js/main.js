@@ -1,20 +1,34 @@
 /*--- Hangman - Project 1 - WDI-DT-44-LB ---*/
 
 /*--- variables ---*/
-player1Word = []; // input/word or phrase submitted by Player 1
-letterEntered = []; // input/letters, word, or phrase submitted by Player 2
-player2Word = []; // cummulatively holds value of 'correct' lettersEntered
-badLetters = []; // cummulatively holds value of 'incorrect' lettersEntered
-alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+var player1Word = []; // input/word or phrase submitted by Player 1
+var letterEntered = []; // input/letters, word, or phrase submitted by Player 2
+var player2Word = []; // cummulatively holds value of 'correct' lettersEntered
+var badLetters = []; // cummulatively holds value of 'incorrect' lettersEntered
+var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
    'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-gallows = []; //not sure if this is necessary; to hold value of divs to flip
+var gallows = []; //not sure if this is necessary; to hold value of divs to flip
 
 /*--- event listeners ---*/
-document.querySelector('button').addEventListener('click', click);
+document.querySelector('button').addEventListener('click', newGame);
+document.getElementsByClassName('keyboard-cell').addEventListener('click', choice);
 
 /*--- functions ---*/
-function click(event) {
+function start() {
+  var message = document.getElementById('message');
+  message.textContent = 'Hey, want to play Hangman?'
+}
+
+/*this will reset board/start new game*/
+function newGame() {
+  start();
   console.log("hello");
+}
+
+function choice(event) {
+  var letter = event.target.textContent;
+  //
+  console.log("goodbye");
 }
 
 /*
