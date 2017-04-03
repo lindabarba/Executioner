@@ -17,6 +17,23 @@ p {
   text-align: center;
 }
 
+.message {
+  font: 2em bold;
+  font-family: 'Amatic SC', cursive;
+  margin: 10px auto;
+}
+
+button {
+  margin: auto;
+  display: block;
+  font-size: 0.75em;
+  font-family: 'Amatic SC', cursive;
+  border: 1px solid #000;
+  border-radius: 25px;
+  background-color: #DEDEDE;
+  cursor: pointer;
+}
+
 .gallows {
   height: 500px;
   width: 50%;
@@ -45,13 +62,6 @@ p {
   border-left: hidden;
 }
 
-.message {
-  font: 2em bold;
-  font-family: 'Amatic SC', cursive;
-  margin: 15px 0px 5px 0px;
-  text-align: center;
-}
-
 .keyboard-table {
   width: 75%;
   font: 3em bold;
@@ -60,14 +70,16 @@ p {
   justify-content: center;
   align-items: center;
   margin: 50px auto;
-  cursor: pointer;
 }
 
 .keyboard-cell {
   border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #DEDEDE;
   box-sizing: border-box;
   width: 50px;
   height: 50px;
+  cursor: pointer;
 }
 
 footer {

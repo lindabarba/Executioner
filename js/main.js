@@ -10,8 +10,12 @@ alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
 gallows = []; //not sure if this is necessary; to hold value of divs to flip
 
 /*--- event listeners ---*/
+document.querySelector('button').addEventListener('click', click);
 
 /*--- functions ---*/
+function click(event) {
+  console.log("hello");
+}
 /*pseudocode
 Start with blank slate to allow for 7 guesses (noose, head, body, 2 arms, 2 legs):
 1. Initialize state (blank canvas).
@@ -44,6 +48,6 @@ Start with blank slate to allow for 7 guesses (noose, head, body, 2 arms, 2 legs
     d. else next letterEntered
 10. Handling reset game.
 */
-
+//start();
 
 
