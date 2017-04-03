@@ -16,6 +16,26 @@ document.querySelector('button').addEventListener('click', click);
 function click(event) {
   console.log("hello");
 }
+
+/*
+function click(e) {
+  var id = e.target.id;
+  if (!id) {return} // prevent adding extra element at the end of hte array
+  var value = 0;
+  if (currentPlayer === player1) {
+    value = 1;
+  } else {
+    value = -1;
+  }
+  array[id] = value;
+  renderTable(e.target.id);
+  winCondition();
+  if (checkTie()) {
+    console.log('tie')
+  }
+}
+*/
+
 /*pseudocode
 Start with blank slate to allow for 7 guesses (noose, head, body, 2 arms, 2 legs):
 1. Initialize state (blank canvas).
