@@ -31,14 +31,9 @@ function initialize() {
 
 /*this will reset board/start new game*/
 function startNewGame() {
-  message = 'Awesome!';
-  getSecretWord();
+  message = 'Awesome! Spell out a word for your opponent to guess. Click enter when done.';
   render();
   console.log('New Game!')
-}
-
-function getSecretWord() {
-  message = 'Spell out a word for your opponent to guess. Click enter when done.';
 }
 
 function handleLetterChoice(event) {
@@ -53,22 +48,10 @@ function handleLetterChoice(event) {
   render();
 }
 
-/*use Enter click from Player1 to:
-get word/array length
-use that to append word row & fill with *
-make object with letter:index number pairing?
-*/
-
 function goodOrBad(x) {
   //if good append to guessWord
   //if bad append to badLetters
 
-    //if in secretWord, change innerHTML to reveal
-      //message to 'Good one!'
-    //if not in secretWord
-      //change innerHTML of corresponding keyboard letter to grey or cross-out
-      //flip image with corresponding message of increasing doom
-        //final image - you're dead and have head fall off
 
   //take letter, find in secretWord
     //if in secretWord, change innerHTML to reveal
@@ -84,12 +67,10 @@ function handleEnter() {
     renderSecretWord(secretWord);
     currentPlayer = player2;
   } else if (currentPlayer === player2) {
-    render ();
-  }
-  //if player 1 true pass secretWord on to renderSecretWord
+    renderLetterChoice();
+  } else return;
   //if player 2 true pass variable from function goodOrBad to renderLetterChoice
-  render();
-  console.log('Enter!')
+  console.log("Enter")
 }
 
 function render() {
@@ -104,24 +85,31 @@ function renderGallows() {
 }
 
 function renderSecretWord() {
-  var swl = secretWord.length;
+/*  this isn't working
   var newWordCell = document.createElement('td');
-  var wordCell = newWordCell.appendChild('*');
-  var wordRow = document.getElementById('word-row');
-  for (var idx = 0, idx < swl, idx++) {
+  var newWordText = document.createTextNode ('&#9760');
+  var wordCell = newWordCell.appendChild(newWordText);
+  var wordRow = document.getElementById();
+  for (var idx = 0, idx < secretWord.length, idx++) {
     wordRow.appendChild(wordCell);
   }
-  currentPlayer = player2;
+  document.getElementById("word-row").classList.add("hidden-word");
+  currentPlayer = player2;*/
 }
 
 function renderLetterChoice() {
+    //if not in secretWord
+      //change innerHTML of corresponding keyboard letter to grey or cross-out
+      //flip image with corresponding message of increasing doom
+        //final image - you're dead and have head fall off
+
 /*  alphabet.forEach(function(letter) {
     // select the letter dom
     var letterEl = document.getElementById(letter);
     var class = (badLetters.includes(letter) || guessWord.includes(letter)) ? 'disable-letter' : '';
     letterEl.addClass(class);
-  });
-*/}
+  });*/
+}
 
 /*
 function click(e) {
