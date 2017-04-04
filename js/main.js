@@ -5,8 +5,8 @@ var secretWord;
 var guessWord;
 var badLetters;
 var message;
-var player1;
-var player2;
+//var player1;
+//var player2;
 
 var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
    'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -25,7 +25,7 @@ function initialize() {
   secretWord = [];
   guessWord = [];
   badLetters = [];
-  currentPlayer = player1;
+  //currentPlayer = player1;
   render();
 }
 
