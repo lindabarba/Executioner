@@ -1,4 +1,4 @@
-body {
+* {
   box-sizing: border-box;
 }
 
@@ -69,17 +69,31 @@ button {
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin: 50px auto;
+  margin: 50px auto 25px;
 }
 
 .keyboard-cell {
   border: 1px solid #000;
   border-radius: 5px;
   background-color: #DEDEDE;
+  border-collapse: collapse;
   box-sizing: border-box;
   width: 50px;
   height: 50px;
   cursor: pointer;
+}
+
+#enter {
+  margin: auto;
+  width: 25%;
+  display: block;
+  font-size: 2em;
+  font-family: 'Amatic SC', cursive;
+  border: 1px solid #000;
+  border-radius: 25px;
+  background-color: #DEDEDE;
+  cursor: pointer;
+
 }
 
 footer {

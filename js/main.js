@@ -5,6 +5,8 @@ var secretWord;
 var guessWord;
 var badLetters;
 var message;
+var player1;
+var player2;
 
 var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
    'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -14,6 +16,7 @@ var messageEl = document.getElementById('message');
 
 /*--- event listeners ---*/
 document.querySelector('button').addEventListener('click', startNewGame);
+document.getElementById('enter').addEventListener('click', handleEnter);
 document.getElementById('keyboard-table').addEventListener('click', handleLetterChoice);
 
 /*--- functions ---*/
@@ -22,45 +25,93 @@ function initialize() {
   secretWord = [];
   guessWord = [];
   badLetters = [];
+  currentPlayer = player1;
   render();
 }
 
 /*this will reset board/start new game*/
 function startNewGame() {
-  message = 'Awesome!'
-  // get player2 to pick phrase...
+  message = 'Awesome!';
   getSecretWord();
   render();
+  console.log('New Game!')
 }
 
 function getSecretWord() {
-  message = 'Using the keyboard below, enter a word for your opponent to guess.'
-  //use keyboard, have each letter be added to secretWord
-
+  message = 'Spell out a word for your opponent to guess. Click enter when done.';
 }
 
 function handleLetterChoice(event) {
   var letter = event.target.textContent;
-  //
+  if (currentPlayer === player1) {
+    secretWord.push(letter);
+  } else if (currentPlayer === player2) {
+    goodOrBad(letter);
+  } else return;
   console.log(letter);
-
-
+  console.log(secretWord);
   render();
+}
+
+/*use Enter click from Player1 to:
+get word/array length
+use that to append word row & fill with *
+make object with letter:index number pairing?
+*/
+
+function goodOrBad(x) {
+  //if good append to guessWord
+  //if bad append to badLetters
+
+    //if in secretWord, change innerHTML to reveal
+      //message to 'Good one!'
+    //if not in secretWord
+      //change innerHTML of corresponding keyboard letter to grey or cross-out
+      //flip image with corresponding message of increasing doom
+        //final image - you're dead and have head fall off
+
+  //take letter, find in secretWord
+    //if in secretWord, change innerHTML to reveal
+      //message to 'Good one!'
+    //if not in secretWord
+      //change innerHTML of corresponding keyboard letter to grey or cross-out
+      //flip image with corresponding message of increasing doom
+        //final image - you're dead and have head fall off
+}
+
+function handleEnter() {
+  if (currentPlayer === player1) {
+    renderSecretWord(secretWord);
+    currentPlayer = player2;
+  } else if (currentPlayer === player2) {
+    render ();
+  }
+  //if player 1 true pass secretWord on to renderSecretWord
+  //if player 2 true pass variable from function goodOrBad to renderLetterChoice
+  render();
+  console.log('Enter!')
 }
 
 function render() {
   messageEl.textContent = message;
-  renderSecretWord ();
-  //renderGuessWord ();
+  renderGallows();
+  renderSecretWord();
   renderLetterChoice();
 }
 
+function renderGallows() {
+
+}
+
 function renderSecretWord() {
-  /* add children to DOM element word-row by using length of secretWord
-  to add that many tds w/ class word-cell
-  add textContent to each child
-  use innerHTML to hide this */
-  //function renderLetterChoice();
+  var swl = secretWord.length;
+  var newWordCell = document.createElement('td');
+  var wordCell = newWordCell.appendChild('*');
+  var wordRow = document.getElementById('word-row');
+  for (var idx = 0, idx < swl, idx++) {
+    wordRow.appendChild(wordCell);
+  }
+  currentPlayer = player2;
 }
 
 function renderLetterChoice() {
