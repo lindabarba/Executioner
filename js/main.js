@@ -11,9 +11,10 @@ var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
    'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
 var words = [
-  ['s', 'e', 'c', 'r', 'e', 't'],
-  ['m', 'u', 'r', 'd', 'e', 'r'],
-  ['k', 'i', 'l', 'l', 'e', 'r']
+  ['f', 'r', 'e', 'd', 'd', 'y'],
+  ['j', 'a', 's', 'o', 'n'],
+  ['c', 'a', 'n', 'd', 'y', 'm', 'a', 'n'],
+  ['m', 'i', 'c', 'h', 'a', 'e', 'l']
 ];
 
 // cache dom elements
@@ -35,29 +36,26 @@ function initialize() {
 
 function handleLetterChoice(event) {
   letter = event.target.textContent;
-  // use jQuery to add class & disappear letter - NOT WORKING
-  // is render blowing this out?
-  $('#letter').hide();
   //console.log('secretWord = ', secretWord, 'letter = ', letter);
   if (inArray(secretWord, letter)) {
     //console.log("true");
     //add to guessWord
+    //this needs to be looped?
     var i = secretWord.indexOf(letter);
     guessWord.splice(i, 0, letter);
   }
   else {
-    //console.log("false");
     badLetters.push(letter);
     message = 'Try again.';
   }
   // if ($(secretWord).inArray(letter)) {
-  //   ///var idx = secretWord.indexOf(letter);
-  //   //var char = secretWord[idx];
-  //   //secretWord.forEach(function(char, idx)) {
-  //   ///guessWord.splice(idx, 0, letter);
-  //   //(secretWord.forEach(function(char, idx) {
-  //   //  if ( char === letter ) guessWord[idx] = char;
-  //   //});
+  //   var idx = secretWord.indexOf(letter);
+  //   var char = secretWord[idx];
+  //   secretWord.forEach(function(char, idx)) {
+  //   guessWord.splice(idx, 0, letter);
+  //   (secretWord.forEach(function(char, idx) {
+  //     if ( char === letter ) guessWord[idx] = char;
+  //   });
   //   message = 'Well done!';
   //   console.log('xyz');
   //   } else {
@@ -97,6 +95,7 @@ function render() {
   renderKeyboard();
 }
 
+//this is working
 function renderGallows() {
   var l = badLetters.length;
   if (l > 0) {
@@ -110,43 +109,13 @@ function renderSecretWord() {
   var sw = document.getElementById('word-row');
 }
 
+//is the letter variable in global messing this up?
 function renderKeyboard() {
-  //if not in secretWord
-    //change innerHTML of corresponding keyboard letter to grey or cross-out
-    //flip image with corresponding message of increasing doom
-      //final image - you're dead and have head fall off
-
   alphabet.forEach(function(letter) {
-    // select the letter dom
     var letterEl = document.getElementById(letter);
-    var className = (badLetters.includes(letter) || guessWord.includes(letter)) ? 'disable-letter' : '';
+    var className = (badLetters.includes(letter) || guessWord.includes(letter)) ? 'disabled' : '';
     $(letterEl).addClass(className);
   });
 }
 
 initialize();
-
-/*
-function letterAlreadyUsed(letter) {
-  //check guessWord & badLetters
-  return false;
-}
-
-function goodOrBad() {
-  //use ternary here
-  var isw = secretWord.indexOf(letter);
-  if (secretWord.includes(letter) === true) {
-    renderKeyboard(letter);
-  } else if (secretWord.includes(letter) === false) {
-      badLetters.push(letter);
-      renderBadLetter(letter);
-    }
-    else return;
-    console.log(badLetters);
-}
-*/
-
-  //do I need this if removing letter
-  //if (letterAlreadyUsed(letter)) return;
-  // check if in secretWord, if so add to gueesWord
-
