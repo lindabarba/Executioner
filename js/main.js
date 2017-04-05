@@ -107,8 +107,10 @@ function renderGallows() {
 }
 
 function renderSecretWord() {
-  $('word-row').text(letter)
-  var sw = document.getElementById('word-row');
+  var dispalySecretWord = (secretWord.join(''));
+  $('#word-row').text(dispalySecretWord);
+  //$('word-row').text(letter)
+  //var sw = document.getElementById('word-row');
 }
 
 //this is working
