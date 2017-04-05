@@ -87,10 +87,6 @@ button {
   cursor: pointer;
 }
 
-.disabled {
-  display: none;
-}
-
 footer {
   text-align: center;
   font-size: 10px;
