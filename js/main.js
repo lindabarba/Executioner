@@ -6,6 +6,7 @@ var guessWord;
 var badLetters;
 var message;
 var letter;
+var gameStatus;
 
 var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
    'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -40,7 +41,7 @@ function handleLetterChoice(event) {
   if (inArray(secretWord, letter)) {
     //console.log("true");
     //add to guessWord
-    //this needs to be looped?
+    //this needs to be looped; not adding double-letters
     var i = secretWord.indexOf(letter);
     guessWord.splice(i, 0, letter);
   }
@@ -81,11 +82,11 @@ function checkWin() {
   if (secretWord.join('') === guessWord.join('')) {
     message = 'You won!';
     document.getElementById("image").innerHTML="<img src='images/Win.png' />";
-    //disable keyboard keep start game
+    //need true/false win logic
   } else if (badLetters.length > 6) {
     message = 'You lost.';
     document.getElementById("image").innerHTML="<img src='images/Lose.png' />";
-    //disable keyboard
+    //need true/false win logic
   } else return;
 }
 
@@ -99,7 +100,7 @@ function render() {
 //this is working
 function renderGallows() {
   var l = badLetters.length;
-  if (l > 0) {
+  if (l > 0 && l < 7) {
     var imagePath = ("<img src='images/" + l + ".png' />");
     document.getElementById('image').innerHTML=imagePath;
   }
@@ -110,13 +111,16 @@ function renderSecretWord() {
   var sw = document.getElementById('word-row');
 }
 
-//is the letter variable in global messing this up?
+//this is working
 function renderKeyboard() {
   alphabet.forEach(function(letter) {
     var letterEl = document.getElementById(letter);
     var className = (badLetters.includes(letter) || guessWord.includes(letter)) ? 'disabled' : '';
     $(letterEl).addClass(className);
   });
+  //if win logic statement {
+  //  console.log("game over");
+  //}
 }
 
 initialize();
