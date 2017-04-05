@@ -35,39 +35,6 @@ function initialize() {
   console.log(secretWord);
 }
 
-function handleLetterChoice(event) {
-  letter = event.target.textContent;
-  //console.log('secretWord = ', secretWord, 'letter = ', letter);
-  if (inArray(secretWord, letter)) {
-    //console.log("true");
-    //add to guessWord
-    //this needs to be looped; not adding double-letters
-    var i = secretWord.indexOf(letter);
-    guessWord.splice(i, 0, letter);
-  }
-  else {
-    badLetters.push(letter);
-    message = 'Try again.';
-  }
-  // if ($(secretWord).inArray(letter)) {
-  //   var idx = secretWord.indexOf(letter);
-  //   var char = secretWord[idx];
-  //   secretWord.forEach(function(char, idx)) {
-  //   guessWord.splice(idx, 0, letter);
-  //   (secretWord.forEach(function(char, idx) {
-  //     if ( char === letter ) guessWord[idx] = char;
-  //   });
-  //   message = 'Well done!';
-  //   console.log('xyz');
-  //   } else {
-  //   }
-  checkWin();
-  render();
-  console.log(letter);
-  console.log(guessWord);
-  console.log(badLetters);
-}
-
 function inArray(array, letter) {
   var lowerCaseLetter = letter.toLowerCase();
   var idx = array.indexOf(lowerCaseLetter);
@@ -76,6 +43,28 @@ function inArray(array, letter) {
   } else {
     return true;
   }
+}
+
+function handleLetterChoice(event) {
+  letter = event.target.textContent;
+  var idx = secretWord.indexOf(letter);
+  if (inArray(secretWord, letter)) {
+    guessWord.splice(idx, 0, letter);
+  } else {
+    badLetters.push(letter);
+    message = 'Try again.';
+    }
+/*
+  var char = secretWord[idx];
+    secretWord.forEach(function(char, idx) {
+      if ( char === letter ) guessWord[idx] = char; {
+        guessWord.splice(idx, 0, letter);
+*/
+    checkWin();
+    render();
+    console.log(letter);
+    console.log(guessWord);
+    console.log(badLetters);
 }
 
 function checkWin() {
@@ -107,10 +96,13 @@ function renderGallows() {
 }
 
 function renderSecretWord() {
-  var dispalySecretWord = (secretWord.join(''));
-  $('#word-row').text(dispalySecretWord);
-  //$('word-row').text(letter)
-  //var sw = document.getElementById('word-row');
+  //display secretWord.length *
+  if (guessWord.length > 0) {
+    var displaySecretWord = (secretWord.join(''));
+    $('#word-row').text(displaySecretWord);
+  } else if (guessWord.length > 0 && secretWord.length > guessWord.length) {
+      $('#word-row').text('FIXME');
+  } else $('#word-row').text('*');
 }
 
 //this is working
