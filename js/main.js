@@ -61,6 +61,7 @@ function handleLetterChoice(event) {
   //   } else {
   //   }
   checkWin();
+  render();
   console.log(letter);
   console.log(guessWord);
   console.log(badLetters);
