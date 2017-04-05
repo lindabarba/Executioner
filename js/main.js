@@ -37,12 +37,17 @@ function handleLetterChoice(event) {
   letter = event.target.textContent;
   // use jQuery to add class & disappear letter - NOT WORKING
   $('#letter').addClass('disabled').removeClass('keyboard-cell');
-  console.log('secretWord = ', secretWord, 'letter = ', letter);
+  //console.log('secretWord = ', secretWord, 'letter = ', letter);
   if (inArray(secretWord, letter)) {
     console.log("true");
+    //add to guessWord
+    var i = secretWord.indexOf(letter);
+    guessWord.splice(i, 0, letter);
   }
   else {
     console.log("false");
+    //badLetters.push(letter);
+    //message = 'Try again.';
   }
   // if ($(secretWord).inArray(letter)) {
   //   ///var idx = secretWord.indexOf(letter);
@@ -55,8 +60,6 @@ function handleLetterChoice(event) {
   //   message = 'Well done!';
   //   console.log('xyz');
   //   } else {
-  //     badLetters.push(letter);
-  //     message = 'Try again.';
   //   }
   checkWin();
   console.log(letter);
