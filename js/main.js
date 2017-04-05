@@ -112,7 +112,11 @@ function renderKeyboard() {
     var className = (badLetters.includes(letter) || guessWord.includes(letter)) ? 'disabled' : '';
     $(letterEl).addClass(className);
   });
-  //if win logic statement {
+  if (badLetters.length > 6 || (guessWord.length === secretWord.length)) {
+    $('#keyboard-row').addClass('disabled');
+  } /*else if (badLetters.length = 0) {
+    $('#keyboard-row').removeClass('disabled');
+  }*/
   //  console.log("game over");
   //}
 }
