@@ -38,6 +38,12 @@ function handleLetterChoice(event) {
   // use jQuery to add class & disappear letter - NOT WORKING
   $('#letter').addClass('disabled').removeClass('keyboard-cell');
   console.log('secretWord = ', secretWord, 'letter = ', letter);
+  if (inArray(secretWord, letter)) {
+    console.log("true");
+  }
+  else {
+    console.log("false");
+  }
   // if ($(secretWord).inArray(letter)) {
   //   ///var idx = secretWord.indexOf(letter);
   //   //var char = secretWord[idx];
