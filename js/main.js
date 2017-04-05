@@ -37,24 +37,35 @@ function handleLetterChoice(event) {
   letter = event.target.textContent;
   // use jQuery to add class & disappear letter - NOT WORKING
   $('#letter').addClass('disabled').removeClass('keyboard-cell');
-  if ($(secretWord).inArray(letter)) {
-    ///var idx = secretWord.indexOf(letter);
-    //var char = secretWord[idx];
-    //secretWord.forEach(function(char, idx)) {
-    ///guessWord.splice(idx, 0, letter);
-    //(secretWord.forEach(function(char, idx) {
-    //  if ( char === letter ) guessWord[idx] = char;
-    //});
-    message = 'Well done!';
-    console.log('xyz');
-    } else {
-      badLetters.push(letter);
-      message = 'Try again.';
-    }
+  console.log('secretWord = ', secretWord, 'letter = ', letter);
+  // if ($(secretWord).inArray(letter)) {
+  //   ///var idx = secretWord.indexOf(letter);
+  //   //var char = secretWord[idx];
+  //   //secretWord.forEach(function(char, idx)) {
+  //   ///guessWord.splice(idx, 0, letter);
+  //   //(secretWord.forEach(function(char, idx) {
+  //   //  if ( char === letter ) guessWord[idx] = char;
+  //   //});
+  //   message = 'Well done!';
+  //   console.log('xyz');
+  //   } else {
+  //     badLetters.push(letter);
+  //     message = 'Try again.';
+  //   }
   checkWin();
   console.log(letter);
   console.log(guessWord);
   console.log(badLetters);
+}
+
+function inArray(array, letter) {
+  var lowerCaseLetter = letter.toLowerCase();
+  var idx = array.indexOf(lowerCaseLetter);
+  if (idx === -1) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 function checkWin() {
