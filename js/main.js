@@ -12,7 +12,7 @@ var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
    'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
 var words = [
-  ['f', 'r', 'e', 'd', 'd', 'y'],
+  ['f', 'r', 'e', 'd', 'y'],
   ['j', 'a', 's', 'o', 'n'],
   ['c', 'a', 'n', 'd', 'y', 'm', 'a', 'n'],
   ['m', 'i', 'c', 'h', 'a', 'e', 'l']
@@ -109,6 +109,7 @@ function renderSecretWord() {
 
 //this is working
 function renderKeyboard() {
+  $('#keyboard-row').removeClass('disabled');
   alphabet.forEach(function(letter) {
     var letterEl = document.getElementById(letter);
     var className = (badLetters.includes(letter) || guessWord.includes(letter)) ? 'disabled' : '';
@@ -116,7 +117,7 @@ function renderKeyboard() {
   });
   if (badLetters.length > 6 || (guessWord.length === secretWord.length)) {
     $('#keyboard-row').addClass('disabled');
-  } /*else if (badLetters.length = 0) {
+  } else return;/*if () {
     $('#keyboard-row').removeClass('disabled');
   }*/
   //  console.log("game over");
