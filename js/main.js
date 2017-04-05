@@ -68,6 +68,8 @@ function handleLetterChoice(event) {
 }
 
 function checkWin() {
+  var win = (secretWord.join('') === guessWord.join(''));
+  var lose = (badLetters.length > 6);
   if (secretWord.join('') === guessWord.join('')) {
     message = 'You won!';
     document.getElementById("image").innerHTML="<img src='images/Win.png' />";
