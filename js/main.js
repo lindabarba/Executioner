@@ -70,11 +70,11 @@ function handleLetterChoice(event) {
 function checkWin() {
   var win = (secretWord.join('') === guessWord.join(''));
   var lose = (badLetters.length > 6);
-  if (secretWord.join('') === guessWord.join('')) {
+  if (win === true) {
     message = 'You won!';
     document.getElementById("image").innerHTML="<img src='images/Win.png' />";
     //need true/false win logic
-  } else if (badLetters.length > 6) {
+  } else if (lose === true) {
     message = 'You lost.';
     document.getElementById("image").innerHTML="<img src='images/Lose.png' />";
     //need true/false win logic
