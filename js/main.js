@@ -5,6 +5,7 @@ var secretWord;
 var guessWord;
 var badLetters;
 var message;
+var letter;
 
 var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
    'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -33,10 +34,10 @@ function initialize() {
 }
 
 function handleLetterChoice(event) {
-  var letter = event.target.textContent;
+  letter = event.target.textContent;
   // use jQuery to add class & disappear letter - NOT WORKING
   $('#letter').addClass('disabled').removeClass('keyboard-cell');
-  if $(secretWord).inArray(letter)) {
+  if ($(secretWord).inArray(letter)) {
     ///var idx = secretWord.indexOf(letter);
     //var char = secretWord[idx];
     //secretWord.forEach(function(char, idx)) {
@@ -89,16 +90,16 @@ function renderSecretWord() {
 }
 
 function renderKeyboard() {
-    //if not in secretWord
-      //change innerHTML of corresponding keyboard letter to grey or cross-out
-      //flip image with corresponding message of increasing doom
-        //final image - you're dead and have head fall off
+  //if not in secretWord
+    //change innerHTML of corresponding keyboard letter to grey or cross-out
+    //flip image with corresponding message of increasing doom
+      //final image - you're dead and have head fall off
 
-    alphabet.forEach(function(letter) {
+  alphabet.forEach(function(letter) {
     // select the letter dom
     var letterEl = document.getElementById(letter);
-    var class = (badLetters.includes(letter) || guessWord.includes(letter)) ? 'disable-letter' : '';
-    letterEl.addClass(class);
+    var className = (badLetters.includes(letter) || guessWord.includes(letter)) ? 'disable-letter' : '';
+    $(letterEl).addClass(className);
   });
 }
 
