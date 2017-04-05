@@ -35,8 +35,7 @@ button {
 }
 
 .gallows {
-  /*height: 500px;*/
-  height: 100px;
+  height: 500px;
   width: 50%;
   border: 1px solid #000;
   border-collapse: collapse;
@@ -46,7 +45,7 @@ button {
   align-items: center;
 }
 
-#word-table {
+#guess-word {
   width: 48%;
   font: 3em bold;
   font-family: 'Amatic SC', cursive;
@@ -68,7 +67,7 @@ button {
 
 #keyboard-row {
   width: 75%;
-  font: 2em bold;
+  font: 1em bold;
   font-family: 'Amatic SC', cursive;
   text-align: center;
   justify-content: center;
@@ -76,8 +75,8 @@ button {
   margin: 50px auto 25px;
 }
 
-.keyboard-cell {
-  margin: auto;
+#keyboard-row td {
+  margin: 1.5px;
   border: 1px solid #000;
   border-radius: 5px;
   display: inline-block;
@@ -88,7 +87,7 @@ button {
   cursor: pointer;
 }
 
-.disabled {
+#keyboard-row td.disabled {
   display: none;
 }
 
