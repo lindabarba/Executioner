@@ -3,14 +3,14 @@
 This is a game developed by Linda Barba during General Assembly's WDI-DT-44.  
 The purpose of the project for the developer is to utilize programming skills learned in WDI.  
 The purpose of the game for the end user is to have fun. Game rules outlined in app's index.html.  
-This readme covers Version **X.x** and was last updated March 30, 2017.
+This readme covers Version 1.0 and was last updated April 5, 2017.
 #### Technologies Used  
-HTML  
-CSS  
-JavaScript  
-jQuery  
-  
-  Further information on the development of this project can be found in the developer's [Trello project page](https://trello.com/b/46CZcoKL/hangman-wdi-dt-44-project-1) or [GitHub project repository](https://github.com/lindabarba/WDI-LB-Work/tree/master/projects/Hangman). All production files are stored there. GitHub repository is original, not a fork.  
+* HTML  
+* CSS  
+* JavaScript  
+* jQuery  
+
+Further information on the development of this project can be found in the developer's [Trello project page](https://trello.com/b/46CZcoKL/hangman-wdi-dt-44-project-1) or [GitHub project repository](https://github.com/lindabarba/WDI-LB-Work/tree/master/projects/Hangman). All production files are stored there. GitHub repository is original, not a fork.  
 Google Fonts [Nosifer](https://fonts.google.com/specimen/Nosifer) and [Amaric](https://fonts.google.com/specimen/Amatic\+SC) are being used.  
 **PLACEHOLDER FOR IMAGUR LINKS.**
   
@@ -26,13 +26,13 @@ This game has been tested in the following browsers (minimum version required):
   
 This app has no dependencies nor calls to any external databases.
   
-End user experience:  
-The deployed/production version of the game is hosted [**PLACEHOLDER LINK TO BE UPDATED**](https://github.com/lindabarba/WDI-LB-Work/tree/master/projects/Hangman). Simply navigate to this address using one of the above browsers and click 'Start New Game'.  
+##### End user experience:  
+The deployed/production version of the game is hosted on Github [here](https:///lindabarba.github.io/Hangman/). Simply navigate to this address using one of the above browsers and click 'Start New Game'.  
 
 ### Next Steps  
-- Testing  
-- Staging  
-- Production  
-- License  
-- Documentation/FAQ  
-- Troubleshooting
+###### Issues:
+* clean up renderGallows function 
+* reveal secretWord on loss 
+
+###### Planned Features:  
+* Further theme expression with elements dynamically added via JS/jQuery

@@ -70,7 +70,8 @@ function render() {
   document.getElementById('keyboard-row').style.display = badLetters.length === 7 ? 'none' : '';
 }
 
-//this is working
+//get this to one line with jQuery & use string interpolation for image path
+//add image for win screen and start screen
 function renderGallows() {
   var l = badLetters.length;
   if (l > 0 && l < 7) {
@@ -78,5 +79,13 @@ function renderGallows() {
     document.getElementById('image').innerHTML=imagePath;
   }
 }
+
+////else (secretWord.join('') === guessWord.join('')) {
+  //   var imagePath = ("<img src='images/Win.png' />");
+  //   document.getElementById('image').innerHTML=imagePath;
+  // } else {
+  //   var imagePath = ("<img src='images/Start.png' />");
+  //   document.getElementById('image').innerHTML=imagePath;
+  // }
 
 initialize();
