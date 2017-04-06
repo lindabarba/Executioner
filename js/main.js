@@ -12,10 +12,16 @@ var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
    'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
 var words = [
-  ['f', 'r', 'e', 'd', 'd', 'y'],
-  ['j', 'a', 's', 'o', 'n'],
-  ['c', 'a', 'n', 'd', 'y', 'm', 'a', 'n'],
-  ['m', 'i', 'c', 'h', 'a', 'e', 'l']
+  ['f', 'r', 'e', 'd', 'd', 'y', ' ', 'k', 'r', 'u', 'g', 'e', 'r'],
+  ['j', 'a', 's', 'o', 'n', ' ', 'v', 'o', 'o', 'r', 'h', 'e', 'e', 's'],
+  ['t', 'h', 'e', ' ', 'c', 'a', 'n', 'd', 'y', 'm', 'a', 'n'],
+  ['m', 'i', 'c', 'h', 'a', 'e', 'l', ' ', 'm', 'y', 'e', 'r', 's'],
+  ['l', 'e', 'a', 't', 'h', 'e', 'r', 'f', 'a', 'c', 'e'],
+  ['p', 'e', 'n', 'n', 'y', 'w', 'i', 's', 'e'],
+  ['p', 'i', 'n', 'h', 'e', 'a', 'd'],
+  ['h', 'a', 'n', 'n', 'i', 'b', 'a', 'l', ' ', 'l', 'e', 'c', 't', 'e', 'r'],
+  ['n', 'o', 'r', 'm', 'a', 'n', ' ', 'b', 'a', 't', 'e', 's'],
+  ['j', 'i', 'g', 's', 'a', 'w'],
 ];
 
 // cache dom elements
@@ -77,7 +83,7 @@ function renderGallows() {
   if (l > 0 && l < 7) {
     var imagePath = ("<img src='images/" + l + ".png' />");
     document.getElementById('image').innerHTML=imagePath;
-  }
+  } else {}
 }
 
 ////else (secretWord.join('') === guessWord.join('')) {
