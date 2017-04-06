@@ -83,7 +83,9 @@ function renderGallows() {
   if (l > 0 && l < 7) {
     var imagePath = ("<img src='images/" + l + ".png' />");
     document.getElementById('image').innerHTML=imagePath;
-  } else {}
+  } else {
+    console.log('image');
+  }
 }
 
 ////else (secretWord.join('') === guessWord.join('')) {
