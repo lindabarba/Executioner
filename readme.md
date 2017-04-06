@@ -17,12 +17,10 @@ Google Fonts [Nosifer](https://fonts.google.com/specimen/Nosifer) and [Amaric](h
 ### Getting Started  
 No addtional software, APIs, plug-ins, frameworks, or libraries need to be installed to play the game. **TO BE UPDATED IF CSS LIBRARY ADDED**  
 This game has been tested in the following browsers (minimum version required):  
-**LIST TO BE UPDATED WITH VER AFTER TESTING  
-- Chrome (X.x)  
-- Firefox (X.x)  
-- Safari (X.x)  
-- Internet Explorer (X.x)  
-- Opera (X.x)**  
+
+* Chrome Version 57.0.2987.133  
+* Firefox Version 52.0.2  
+* Safari Version 10.1  
   
 This app has no dependencies nor calls to any external databases.
   
@@ -32,8 +30,6 @@ The deployed/production version of the game is hosted on Github [here](https:///
 ### Next Steps  
 ###### Issues:
 * clean up renderGallows function 
-* reveal secretWord on loss 
-* message updating on correct guess
 
 ###### Planned Features:  
 * Further theme expression with elements dynamically added via JS/jQuery
