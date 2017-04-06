@@ -82,8 +82,7 @@ function render() {
   messageEl.textContent = message;
   renderGallows();
   guessWordEl.textContent = badLetters.length === 7 ? secretWord.join('') : guessWord.join('');
-  document.getElementById('keyboard-row').style.display = badLetters.length === 7 ? 'none' : '';
-  document.getElementById('keyboard-row').style.display = secretWord.join('') === guessWord.join('') && badLetters.length < 7 ? 'none' : '';
+  document.getElementById('keyboard-row').style.display = (badLetters.length === 7) || (secretWord.join('') === guessWord.join('')) ? 'none' : '';
 }
 
 //get this to one line with jQuery & use string interpolation for image path
