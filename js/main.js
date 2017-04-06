@@ -35,7 +35,6 @@ var words = [
 // cache dom elements
 var messageEl = document.getElementById('message');
 var guessWordEl = document.getElementById('guess-word');
-var secretWordEl;
 
 /*--- event listeners ---*/
 document.querySelector('button').addEventListener('click', initialize);
@@ -82,7 +81,7 @@ function replaceStars() {
 function render() {
   messageEl.textContent = message;
   renderGallows();
-  guessWordEl.textContent = guessWord.join('');
+  guessWordEl.textContent = badLetters.length === 7 ? secretWord.join('') : guessWord.join('');
   document.getElementById('keyboard-row').style.display = badLetters.length === 7 ? 'none' : '';
   document.getElementById('keyboard-row').style.display = secretWord.join('') === guessWord.join('') && badLetters.length < 7 ? 'none' : '';
 }
