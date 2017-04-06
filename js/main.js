@@ -35,6 +35,7 @@ var words = [
 // cache dom elements
 var messageEl = document.getElementById('message');
 var guessWordEl = document.getElementById('guess-word');
+var secretWordEl;
 
 /*--- event listeners ---*/
 document.querySelector('button').addEventListener('click', initialize);
@@ -85,6 +86,7 @@ function render() {
   renderGallows();
   guessWordEl.textContent = guessWord.join('');
   document.getElementById('keyboard-row').style.display = badLetters.length === 7 ? 'none' : '';
+  renderWin;
 }
 
 //get this to one line with jQuery & use string interpolation for image path
@@ -99,9 +101,17 @@ function renderGallows() {
   } else if (l === 7) {
     var imagePath = ("<img src='images/Lose.png' />");
     document.getElementById('image').innerHTML=imagePath;
-  // } if (secretWord.join('') === guessWord.join('') && l > 7) {
-  //   var imagePath = ("<img src='images/Win.png' />");
-  //   document.getElementById('image').innerHTML=imagePath;
+  } if (secretWord.join('') === guessWord.join('') && l > 7) {
+    var imagePath = ("<img src='images/Win.png' />");
+    document.getElementById('image').innerHTML=imagePath;
+  }
+}
+
+function renderWin() {
+  if (secretWord.join('') === guessWord.join('')) {
+    console.log('true');
+  } else {
+    console.log('false');
   }
 }
 
