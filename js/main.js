@@ -66,6 +66,8 @@ function handleLetterChoice(event) {
   }
   if (secretWord.join('') === guessWord.join('')) {
     message = 'You Win!';
+    var imagePath = ("<img src='images/Win.png' />");
+    document.getElementById('image').innerHTML=imagePath;
   } else if (badLetters.length === 7) {
     message = 'You Lose!';
   }
@@ -86,24 +88,21 @@ function render() {
 }
 
 //get this to one line with jQuery & use string interpolation for image path
-//add image for win screen and start screen
 function renderGallows() {
   var l = badLetters.length;
-  if (l > 0 && l < 7) {
+  if (l > 0 && l < 7 && secretWord.join('') !== guessWord.join('')) {
     var imagePath = ("<img src='images/" + l + ".png' />");
     document.getElementById('image').innerHTML=imagePath;
   } else if (l === 0) {
     var imagePath = ("<img src='images/Start.png' />");
     document.getElementById('image').innerHTML=imagePath;
-  }
-}
-
-////else (secretWord.join('') === guessWord.join('')) {
+  } else if (l === 7) {
+    var imagePath = ("<img src='images/Lose.png' />");
+    document.getElementById('image').innerHTML=imagePath;
+  // } if (secretWord.join('') === guessWord.join('') && l > 7) {
   //   var imagePath = ("<img src='images/Win.png' />");
   //   document.getElementById('image').innerHTML=imagePath;
-  // } else {
-  //   var imagePath = ("<img src='images/Start.png' />");
-  //   document.getElementById('image').innerHTML=imagePath;
-  // }
+  }
+}
 
 initialize();
