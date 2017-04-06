@@ -32,7 +32,6 @@ var words = [
   ['h', 'e', 'l', 'e', 'n', ' ', 'l', 'y', 'l', 'e']
 ];
 
-// cache dom elements
 var messageEl = document.getElementById('message');
 var guessWordEl = document.getElementById('guess-word');
 
