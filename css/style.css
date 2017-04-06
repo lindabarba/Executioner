@@ -11,14 +11,14 @@ h1 {
 }
 
 p {
-  font: 1em bold;
+  font: 2em bold;
   font-family: 'Amatic SC', cursive;
   margin: 0px 0px 15px 0px;
   text-align: center;
 }
 
 .display {
-  font: 2em bold;
+  font: 1.5em bold;
   font-family: 'Amatic SC', cursive;
   margin: 10px auto;
 }

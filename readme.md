@@ -33,6 +33,7 @@ The deployed/production version of the game is hosted on Github [here](https:///
 ###### Issues:
 * clean up renderGallows function 
 * reveal secretWord on loss 
+* message updating on correct guess
 
 ###### Planned Features:  
 * Further theme expression with elements dynamically added via JS/jQuery

@@ -21,7 +21,15 @@ var words = [
   ['p', 'i', 'n', 'h', 'e', 'a', 'd'],
   ['h', 'a', 'n', 'n', 'i', 'b', 'a', 'l', ' ', 'l', 'e', 'c', 't', 'e', 'r'],
   ['n', 'o', 'r', 'm', 'a', 'n', ' ', 'b', 'a', 't', 'e', 's'],
-  ['j', 'i', 'g', 's', 'a', 'w'],
+  ['g', 'h', 'o', 's', 't', 'f', 'a', 'c', 'e'],
+  ['l', 'a', 'u', 'r', 'i', 'e', ' ', 's', 't', 'r', 'o', 'd', 'e'],
+  ['s', 'i', 'd', 'n', 'e', 'y', ' ', 'p', 'r', 'e', 's', 'c', 'o', 't', 't'],
+  ['c', 'l', 'a', 'r', 'i', 'c', 'e', ' ', 's', 't', 'a', 'r', 'l', 'i', 'n', 'g'],
+  ['e', 'l', 'l', 'e', 'n', ' ', 'r', 'i', 'p', 'l', 'e', 'y'],
+  ['n', 'a', 'n', 'c', 'y', ' ', 't', 'h', 'o', 'm', 'p', 's', 'o', 'n'],
+  ['k', 'r', 'i', 's', 't', 'y', ' ', 'c', 'o', 't', 't', 'o', 'n'],
+  ['s', 'a', 'l', 'l', 'y', ' ', 'h', 'a', 'r', 'd', 'e', 's', 't', 'y'],
+  ['h', 'e', 'l', 'e', 'n', ' ', 'l', 'y', 'l', 'e']
 ];
 
 // cache dom elements
@@ -34,7 +42,7 @@ document.getElementById('keyboard-table').addEventListener('click', handleLetter
 
 /*--- functions ---*/
 function initialize() {
-  message = 'Hi! Want to play? Start guessing letters';
+  message = 'pick a letter below';
   secretWord = words[Math.floor(Math.random() * words.length)];
   guessWord = [];
   secretWord.forEach(function(char, idx) {
@@ -51,6 +59,7 @@ function handleLetterChoice(event) {
   event.target.className = 'disabled';
   if (secretWord.includes(letter)) {
     replaceStars();
+    message = 'Excellent!';
   } else {
     badLetters.push(letter);
     message = 'Try again!';
@@ -83,8 +92,9 @@ function renderGallows() {
   if (l > 0 && l < 7) {
     var imagePath = ("<img src='images/" + l + ".png' />");
     document.getElementById('image').innerHTML=imagePath;
-  } else {
-    console.log('image');
+  } else if (l === 0) {
+    var imagePath = ("<img src='images/Start.png' />");
+    document.getElementById('image').innerHTML=imagePath;
   }
 }
 
