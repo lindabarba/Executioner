@@ -1,4 +1,4 @@
-/*--- Hangman - Project 1 - WDI-DT-44-LB ---*/
+/*--- Executioner - Project 1 - WDI-DT-44-LB ---*/
 
 /*--- variables ---*/
 var secretWord;
@@ -62,10 +62,6 @@ function handleLetterChoice(event) {
   } else {
     badLetters.push(letter);
     message = 'Afraid not. Try again.';
-    // function playSound(url) {
-    //   var sound1 = new Audio('http://soundbible.com/944-Stab.html');
-    //   sound1.play();
-    // }
   }
   if (secretWord.join('') === guessWord.join('')) {
     message = 'You have escaped! Will you be right back?';
@@ -85,7 +81,8 @@ function render() {
   messageEl.textContent = message;
   renderGallows();
   guessWordEl.textContent = badLetters.length === 7 ? secretWord.join('') : guessWord.join('');
-  document.getElementById('keyboard-row').style.display = (badLetters.length === 7) || (secretWord.join('') === guessWord.join('')) ? 'none' : '';
+  document.getElementById('keyboard-row').style.display = (badLetters.length === 7) ||
+    (secretWord.join('') === guessWord.join('')) ? 'none' : '';
 }
 
 function renderGallows() {

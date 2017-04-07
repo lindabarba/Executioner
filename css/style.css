@@ -35,11 +35,8 @@ button {
 }
 
 .gallows {
-/*  height: 500px;
-*/  width: 50%;
-  /*border: 1px solid #000;
-  border-collapse: collapse;
-  */margin: auto;
+  width: 50%;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
