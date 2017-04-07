@@ -28,6 +28,8 @@ The deployed/production version of the game is hosted on Github [here](https:///
 ### Next Steps  
 ###### Issues:
 * use jQuery & use string interpolation to tighten up functions
+* address rendering between images
+* address viewport
 
 
 ###### Planned Features:  
