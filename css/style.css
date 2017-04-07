@@ -26,7 +26,7 @@ p {
 button {
   margin: auto;
   display: block;
-  font-size: 0.75em;
+  font-size: 1.5em;
   font-family: 'Amatic SC', cursive;
   border: 1px solid #000;
   border-radius: 25px;
@@ -76,7 +76,8 @@ button {
 }
 
 #keyboard-row td {
-  margin: 1.5px;
+  margin: 5px;
+  width: 30px;
   border: 1px solid #000;
   border-radius: 5px;
   display: inline-block;

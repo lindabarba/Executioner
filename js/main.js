@@ -58,15 +58,15 @@ function handleLetterChoice(event) {
   event.target.className = 'disabled';
   if (secretWord.includes(letter)) {
     replaceStars();
-    message = 'Excellent!';
+    message = 'Yes! Very good!';
   } else {
     badLetters.push(letter);
-    message = 'Try again!';
+    message = 'Afraid not. Try again.';
   }
   if (secretWord.join('') === guessWord.join('')) {
-    message = 'You Win!';
+    message = 'You have escaped! Will you be right back?';
   } else if (badLetters.length === 7) {
-    message = 'You Lose!';
+    message = 'You are dead. Will you come back to life?';
   }
   render();
 }
