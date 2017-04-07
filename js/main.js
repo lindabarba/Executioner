@@ -6,10 +6,6 @@ var guessWord;
 var badLetters;
 var message;
 var letter;
-var gameStatus;
-
-var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
-   'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
 var words = [
   ['f', 'r', 'e', 'd', 'd', 'y', ' ', 'k', 'r', 'u', 'g', 'e', 'r'],
