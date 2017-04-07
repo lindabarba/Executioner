@@ -35,11 +35,11 @@ button {
 }
 
 .gallows {
-  height: 500px;
-  width: 50%;
-  border: 1px solid #000;
+/*  height: 500px;
+*/  width: 50%;
+  /*border: 1px solid #000;
   border-collapse: collapse;
-  margin: auto;
+  */margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,7 +52,7 @@ button {
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 25px auto;
 }
 
 #keyboard-table {
@@ -62,7 +62,7 @@ button {
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin: 50px auto 25px;
+  margin: 25px auto;
 }
 
 #keyboard-row {
@@ -72,7 +72,7 @@ button {
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin: 50px auto 25px;
+  margin: 25px auto;
 }
 
 #keyboard-row td {

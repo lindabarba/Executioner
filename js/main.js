@@ -65,7 +65,7 @@ function handleLetterChoice(event) {
     // function playSound(url) {
     //   var sound1 = new Audio('http://soundbible.com/944-Stab.html');
     //   sound1.play();
-    }
+    // }
   }
   if (secretWord.join('') === guessWord.join('')) {
     message = 'You have escaped! Will you be right back?';
@@ -99,7 +99,7 @@ function renderGallows() {
     document.getElementById('image').innerHTML=imagePath;
     return;
   } else if (l === 0) {
-    var imagePath = ("<img src='images/Start.png' />");
+    var imagePath = ("<img src='images/Start.jpg' />");
     document.getElementById('image').innerHTML=imagePath;
     return;
   } else if (l === 7) {
