@@ -29,7 +29,8 @@ The deployed/production version of the game is hosted on Github [here](https:///
 
 ### Next Steps  
 ###### Issues:
-* clean up renderGallows function 
+* use jQuery & use string interpolation to tighten up functions
+
 
 ###### Planned Features:  
 * Further theme expression with elements dynamically added via JS/jQuery
