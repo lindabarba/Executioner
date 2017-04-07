@@ -62,6 +62,10 @@ function handleLetterChoice(event) {
   } else {
     badLetters.push(letter);
     message = 'Afraid not. Try again.';
+    // function playSound(url) {
+    //   var sound1 = new Audio('http://soundbible.com/944-Stab.html');
+    //   sound1.play();
+    }
   }
   if (secretWord.join('') === guessWord.join('')) {
     message = 'You have escaped! Will you be right back?';
