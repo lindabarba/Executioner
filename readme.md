@@ -23,7 +23,7 @@ No addtional software, APIs, plug-ins, frameworks, or libraries need to be insta
 This app has no dependencies nor calls to any external databases.
   
 ##### End user experience:  
-The deployed/production version of the game is hosted on Github [here](https:///lindabarba.github.io/Hangman/). Simply navigate to this address using one of the above browsers and click 'Start New Game'.  
+The deployed/production version of the game is hosted on Github [here](https:///lindabarba.github.io/Executioner/). Simply navigate to this address using one of the above browsers and click 'Start New Game'.  
 
 ### Next Steps  
 ###### Issues:
